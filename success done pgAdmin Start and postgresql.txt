@@ -1,0 +1,45 @@
+root@Spring-Docker:/home/spring-docker16# docker run --name pgadmin_container_sets -p 5051:80 \
+    -e "PGADMIN_DEFAULT_EMAIL=user@domain.com" \
+    -e "PGADMIN_DEFAULT_PASSWORD=SuperSecret"   \
+    -d dpage/pgadmin4:4.30 \
+>
+Unable to find image 'dpage/pgadmin4:4.30' locally
+4.30: Pulling from dpage/pgadmin4
+801bfaa63ef2: Pull complete
+8723b2b92bec: Pull complete
+4e07029ccd64: Pull complete
+594990504179: Pull complete
+140d7fec7322: Pull complete
+2d40c8f2dce1: Pull complete
+32a98d928eae: Pull complete
+29241890eee4: Pull complete
+1bfe6564401f: Pull complete
+fe20bcbe164e: Pull complete
+d1a08a0585ca: Pull complete
+89a109d5d879: Pull complete
+6c5aae5c763c: Pull complete
+e34341960f6a: Pull complete
+52d1b24b3b17: Pull complete
+716ebb818d06: Pull complete
+48e222735e40: Pull complete
+03c8a421aadb: Pull complete
+758a790903b6: Pull complete
+e10592f1a3e6: Pull complete
+Digest: sha256:7b663815351eeaa9beefcd8e0eb1ed2518e4881638360b5570a4ac2581ff9ebe
+Status: Downloaded newer image for dpage/pgadmin4:4.30
+101e355f70f801f26feb2ac5bfdd77d9da7c69c010eaf50f8a06455fa2dee1d6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

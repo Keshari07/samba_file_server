@@ -1,0 +1,30 @@
+root@Spring-Docker:~# docker ps -a
+CONTAINER ID   IMAGE                 COMMAND                  CREATED       STATUS                     PORTS                                            NAMES
+ee2abee672bf   postgres:9.4.19       "docker-entrypoint.s…"   4 days ago    Exited (255) 2 days ago    0.0.0.0:5051->5432/tcp, :::5051->5432/tcp        cdacpostgres
+bfd45f39a510   dpage/pgadmin4:4.30   "/entrypoint.sh"         4 days ago    Exited (255) 2 days ago    443/tcp, 0.0.0.0:4040->80/tcp, :::4040->80/tcp   cdacload_n
+8e9d177d0aeb   httpd:latest          "httpd-foreground"       3 weeks ago   Created                                                                     apache88
+e41b9ebdd42e   tomcat:8.5            "catalina.sh run"        3 weeks ago   Exited (255) 3 weeks ago   8080/tcp                                         tomcat2
+a88309d74bfe   tomcat:8.5            "catalina.sh run"        3 weeks ago   Exited (255) 3 weeks ago   8080/tcp                                         tomcat1
+root@Spring-Docker:~# docker rm
+
+
+
+
+// Create container pgadmin_container
+docker run --name pgadmin_container -p 5050:80 -e "PGADMIN_DEFAULT_EMAIL=abc@qwerty.com" -e "PGADMIN_DEFAULT_PASSWORD=pass" -d dpage/pgadmin4:4.30 
+    
+// Run or Start existing container pgadmin_container    
+docker start --name pgadmin4_container -p 5050:80 -e "PGADMIN_DEFAULT_EMAIL=abc@qwerty.com" -e "PGADMIN_DEFAULT_PASSWORD=pass" -d dpage/pgadmin4:4.30
+    
+//check the particular container's IP Address
+docker inspect postgres_container | grep IPAddress
+
+172.17.0.3
+
+
+//the below command creates a new container
+docker run --name postgres_containerdb -e "POSTGRES_PASSWORD=pass"  -p 4040:5432 -d postgres:9.4.26
+
+
+//the below command runs or starts an already created container
+docker start postgres_container -e "POSTGRES_PASSWORD=pass"  -p 5051:5432 -d postgres:9.4.19

@@ -1,0 +1,69 @@
+root@Spring-Docker:~# docker run --name pgadmin_container -p 5050:80 -e "PGADMIN_DEFAULT_EMAIL=admin@kali.com" -e "PGADMIN_DEFAULT_PASSWORD=pass" -d dpage/pgadmin4:4.30
+97f84d80f663d9da272786176724747ce3acb7ec77e27390029e7b8c2179e3a4
+
+
+
+
+
+
+root@Spring-Docker:~# docker run --name postgres_containerdb -e "POSTGRES_PASSWORD=8085"  -p 5051:5432 -d postgres:9.4.19
+4f431d2db152d747c2a4cc1944b8024e7e7205c720a37736cbe0db72a4ae0b8d
+root@Spring-Docker:~#
+
+# Run pgAdmin4 container
+docker run --name pgadmin_containerpg -p 5051:80 \
+  -e PGADMIN_DEFAULT_EMAIL=admin@kali.com \
+  -e PGADMIN_DEFAULT_PASSWORD=pass \
+  -d dpage/pgadmin4:4.30
+
+# Run PostgreSQL container
+docker run --name postgres_containerdb -e POSTGRES_PASSWORD=123456 \
+  -p 5050:5432 -d postgres:9.4.19
+  
+  
+  
+  
+  
+  
+  
+  
+  docker run --name pgadmin_container_sets -p 5051:80 \
+    -e "PGADMIN_DEFAULT_EMAIL=user@domain.com" \
+    -e "PGADMIN_DEFAULT_PASSWORD=SuperSecret"   \
+    -d dpage/pgadmin4:4.30
+
+
+docker run --name postgres_container -e POSTGRES_PASSWORD=cdacsil -p 5050:5432  postgres:9.4.19
+
+
+
+docker run --name pgadmin_container_sets -p 5051:80 \
+    -e "PGADMIN_DEFAULT_EMAIL=user@domain.com" \
+    -e "PGADMIN_DEFAULT_PASSWORD=SuperSecret"   \
+    -d dpage/pgadmin4:4.30\
+	
+	
+	
+	
+Find a repository…
+Keshari07-1-AUG_2024-LXS Public
+BSD 2-Clause "Simplified" License Updated yesterday
+27-July_VI Public
+GNU General Public License v3.0 Updated last week
+LINUX-26-JULY Public
+Updated last week
+Cyber_SSL_Info_Vi Public
+GNU General Public License v3.0 Updated last week
+-26- Public
+ Java Updated last week
+Load_Balancing_Project_Linux_25_July Public
+ TypeScript BSD 3-Clause "New" or "Revised" License Updated last week
+DevOps_Project_1 Public
+ HCL BSD 2-Clause "Simplified" License Updated last week
+FileZilla_3.67.1_win64_sponsored2 Public
+BSD 3-Clause "New" or "Revised" License Updated 2 weeks ago
+kali_ubuntu_Paper Public
+GNU General Public License v2.0 Updated 2 weeks ago
+16-17-18-IXS 
+
+https://github.com/Keshari07/doc_IXS_02_Aug.git
